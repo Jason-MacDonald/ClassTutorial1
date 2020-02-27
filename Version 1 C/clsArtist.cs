@@ -19,9 +19,9 @@ namespace Version_1_C
         public string Name { get => _Name; set => _Name = value; }
         public string Speciality { get => _Speciality; set => _Speciality = value; }
         public string Phone { get => _Phone; set => _Phone = value; }
-        public decimal TotalValue { get => _TotalValue; set => _TotalValue = value; }
-        public clsWorksList WorksList { get => _WorksList; set => _WorksList = value; }
-        public clsArtistList ArtistList { get => _ArtistList; set => _ArtistList = value; }
+        public decimal TotalValue { get => _TotalValue; set => _TotalValue = value; } // Should remove getters?
+        public clsWorksList WorksList { get => _WorksList; set => _WorksList = value; } // Should remove getters?
+        public clsArtistList ArtistList { get => _ArtistList; set => _ArtistList = value; } // Should remove getters?
 
         public clsArtist(clsArtistList prArtistList)
         {

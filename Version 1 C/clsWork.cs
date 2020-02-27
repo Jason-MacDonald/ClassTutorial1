@@ -24,8 +24,7 @@ namespace Version_1_C
          {
              char lcReply;
              InputBox lcInputBox = new InputBox("Enter P for Painting, S for Sculpture and H for Photograph");
-             //lcInputBox.ShowDialog();
-             //if (lcInputBox.getAction() == true)
+
              if (lcInputBox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
              {
                  lcReply = Convert.ToChar(lcInputBox.getAnswer());

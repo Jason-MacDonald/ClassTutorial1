@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Version_1_C
@@ -56,7 +51,6 @@ namespace Version_1_C
             _Work.Name = txtName.Text;
             _Work.Date = DateTime.Parse(txtCreation.Text);
             _Work.Value = decimal.Parse(txtValue.Text);
-        }
-    
+        }    
     }
 }
