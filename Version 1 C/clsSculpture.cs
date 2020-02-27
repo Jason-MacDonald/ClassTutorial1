@@ -17,15 +17,11 @@ namespace Version_1_C
 
         public override void EditDetails()
         {
-            //if (_SculptureDialog == null)
-            //{
-            //    _SculptureDialog = new frmSculpture();
-            //}
-            //_SculptureDialog.SetDetails(_Name, _Date, _Value, _Weight, _Material);
-            //if (_SculptureDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    _SculptureDialog.GetDetails(ref _Name, ref _Date, ref _Value, ref _Weight, ref _Material);
-            //}
+            if (_SculptureDialog == null)
+            {
+                _SculptureDialog = new frmSculpture();
+            }
+            _SculptureDialog.SetDetails(this);
         }
     }
 }

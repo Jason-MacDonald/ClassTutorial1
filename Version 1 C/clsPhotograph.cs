@@ -19,15 +19,11 @@ namespace Version_1_C
 
         public override void EditDetails()
         {
-            //if (_PhotographDialog == null)
-            //{
-            //    _PhotographDialog = new frmPhotograph();
-            //}
-            //_PhotographDialog.SetDetails(_Name, _Date, _Value, _Width, _Height, _Type);
-            //if (_PhotographDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    _PhotographDialog.GetDetails(ref _Name, ref _Date, ref _Value, ref _Width, ref _Height, ref _Type);
-            //}
+            if (_PhotographDialog == null)
+            {
+                _PhotographDialog = new frmPhotograph();
+            }
+            _PhotographDialog.SetDetails(this);
         }
     }
 }
