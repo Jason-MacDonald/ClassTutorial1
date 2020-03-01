@@ -129,8 +129,8 @@ namespace Version_1_C
         private void pushData()
         {
             _Artist.Name = txtName.Text;
-            _Artist.Speciality = txtName.Text;
-            _Artist.Phone = txtSpeciality.Text;
+            _Artist.Speciality = txtSpeciality.Text;
+            _Artist.Phone = txtPhone.Text;
             _WorksList.SortOrder = _WorksList.SortOrder;
         }
     }

@@ -31,15 +31,16 @@ namespace Version_1_C
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
-            this.txtAnswer = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.cbType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(272, 78);
+            this.btnOK.Location = new System.Drawing.Point(322, 79);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 11;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@ namespace Version_1_C
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(191, 78);
+            this.btnCancel.Location = new System.Drawing.Point(214, 79);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -58,41 +60,50 @@ namespace Version_1_C
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(16, 13);
+            this.lblQuestion.Location = new System.Drawing.Point(13, 9);
+            this.lblQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(59, 13);
+            this.lblQuestion.Size = new System.Drawing.Size(75, 16);
             this.lblQuestion.TabIndex = 2;
             this.lblQuestion.Text = "lblQuestion";
-            // 
-            // txtAnswer
-            // 
-            this.txtAnswer.Location = new System.Drawing.Point(19, 43);
-            this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(328, 20);
-            this.txtAnswer.TabIndex = 1;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(16, 104);
+            this.lblError.Location = new System.Drawing.Point(13, 121);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(39, 13);
+            this.lblError.Size = new System.Drawing.Size(51, 16);
             this.lblError.TabIndex = 4;
             this.lblError.Text = "lblError";
+            // 
+            // cbType
+            // 
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Items.AddRange(new object[] {
+            "Painting",
+            "Photograph",
+            "Sculpture"});
+            this.cbType.Location = new System.Drawing.Point(12, 38);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(411, 24);
+            this.cbType.TabIndex = 12;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.CbType_SelectedIndexChanged);
             // 
             // InputBox
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 128);
+            this.ClientSize = new System.Drawing.Size(438, 148);
+            this.Controls.Add(this.cbType);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InputBox";
-            this.Text = "InputBox";
+            this.Text = "Artwork Type";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +114,7 @@ namespace Version_1_C
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblQuestion;
-        private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ComboBox cbType;
     }
 }

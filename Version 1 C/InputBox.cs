@@ -6,28 +6,30 @@ namespace Version_1_C
     public partial class InputBox : Form
     {
         private string _Answer;
+        private int _SelectedIndex = 0;
 
         public InputBox(string prQuestion)
         {
             InitializeComponent();
             lblQuestion.Text = prQuestion;
             lblError.Text = "";
-            txtAnswer.Focus();
+            cbType.Focus();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtAnswer.Text.Length > 0 && txtAnswer.Text.Length < 2)
+            if (cbType.Text.Length > 0)
             {
-                _Answer = txtAnswer.Text;
+                _Answer = cbType.Text;
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                lblError.Text = "Please enter one character into the text box.";
+                lblError.Text = "No type selected.";
             }
         }
+
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -38,6 +40,11 @@ namespace Version_1_C
         public string getAnswer()
         {
             return _Answer;
+        }
+
+        private void CbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _SelectedIndex = cbType.SelectedIndex;
         }
     }
 }

@@ -22,18 +22,17 @@ namespace Version_1_C
 
          public static clsWork NewWork()
          {
-             char lcReply;
-             InputBox lcInputBox = new InputBox("Enter P for Painting, S for Sculpture and H for Photograph");
+             InputBox lcInputBox = new InputBox("Select an artwork type from the drop down box.");
 
              if (lcInputBox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
              {
-                 lcReply = Convert.ToChar(lcInputBox.getAnswer());
+                 string lcReply = lcInputBox.getAnswer();
 
-                 switch (char.ToUpper(lcReply))
+                 switch (lcReply)
                  {
-                     case 'P': return new clsPainting();
-                     case 'S': return new clsSculpture();
-                     case 'H': return new clsPhotograph();
+                     case "Painting": return new clsPainting();
+                     case "Sculpture": return new clsSculpture();
+                     case "Photograph": return new clsPhotograph();
                      default: return null;
                  }
              }

@@ -42,14 +42,14 @@ namespace Version_1_C
         protected virtual void updateForm()
         {
             txtName.Text = _Work.Name;
-            txtCreation.Text = _Work.Date.ToShortDateString();
+            dtpCreation.Text = _Work.Date.ToShortDateString();
             txtValue.Text = _Work.Value.ToString();
         }
 
         protected virtual void pushData()
         {
             _Work.Name = txtName.Text;
-            _Work.Date = DateTime.Parse(txtCreation.Text);
+            _Work.Date = DateTime.Parse(dtpCreation.Text);
             _Work.Value = decimal.Parse(txtValue.Text);
         }    
     }

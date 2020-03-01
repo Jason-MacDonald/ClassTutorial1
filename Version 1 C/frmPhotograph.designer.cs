@@ -34,63 +34,92 @@ namespace Version_1_C
             this.Label5 = new System.Windows.Forms.Label();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(97, 171);
+            this.txtType.Location = new System.Drawing.Point(129, 210);
+            this.txtType.Margin = new System.Windows.Forms.Padding(4);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(96, 20);
+            this.txtType.Size = new System.Drawing.Size(127, 22);
             this.txtType.TabIndex = 6;
             // 
             // Label6
             // 
-            this.Label6.Location = new System.Drawing.Point(9, 174);
+            this.Label6.Location = new System.Drawing.Point(12, 214);
+            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(56, 23);
+            this.Label6.Size = new System.Drawing.Size(75, 28);
             this.Label6.TabIndex = 56;
             this.Label6.Text = "Type";
             // 
             // txtHeight
             // 
-            this.txtHeight.Location = new System.Drawing.Point(97, 139);
+            this.txtHeight.Location = new System.Drawing.Point(129, 171);
+            this.txtHeight.Margin = new System.Windows.Forms.Padding(4);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(96, 20);
+            this.txtHeight.Size = new System.Drawing.Size(127, 22);
             this.txtHeight.TabIndex = 5;
             // 
             // Label5
             // 
-            this.Label5.Location = new System.Drawing.Point(9, 142);
+            this.Label5.Location = new System.Drawing.Point(12, 175);
+            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(56, 23);
+            this.Label5.Size = new System.Drawing.Size(75, 28);
             this.Label5.TabIndex = 54;
             this.Label5.Text = "Height";
             // 
             // txtWidth
             // 
-            this.txtWidth.Location = new System.Drawing.Point(97, 107);
+            this.txtWidth.Location = new System.Drawing.Point(129, 132);
+            this.txtWidth.Margin = new System.Windows.Forms.Padding(4);
             this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(96, 20);
+            this.txtWidth.Size = new System.Drawing.Size(127, 22);
             this.txtWidth.TabIndex = 4;
             // 
             // Label4
             // 
-            this.Label4.Location = new System.Drawing.Point(9, 110);
+            this.Label4.Location = new System.Drawing.Point(12, 135);
+            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(56, 23);
+            this.Label4.Size = new System.Drawing.Size(75, 28);
             this.Label4.TabIndex = 52;
             this.Label4.Text = "Width";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(258, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 16);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "cm";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(258, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(26, 16);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "cm";
+            // 
             // frmPhotograph
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(363, 205);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(559, 252);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtWidth);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.txtType);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmPhotograph";
             this.Text = "Photograph";
             this.Controls.SetChildIndex(this.txtType, 0);
@@ -99,6 +128,8 @@ namespace Version_1_C
             this.Controls.SetChildIndex(this.Label5, 0);
             this.Controls.SetChildIndex(this.Label4, 0);
             this.Controls.SetChildIndex(this.txtWidth, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +143,7 @@ namespace Version_1_C
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.TextBox txtWidth;
         internal System.Windows.Forms.Label Label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
