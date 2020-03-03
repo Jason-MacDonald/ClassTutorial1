@@ -5,13 +5,13 @@ namespace Version_1_C
     [Serializable()] 
     public abstract class clsWork
     {
-        private string name;
-        private DateTime date = DateTime.Now;
-        private decimal value;
+        private string _Name;
+        private DateTime _Date = DateTime.Now;
+        private decimal _Value;
 
-        public string Name { get => name; set => name = value; }
-        public DateTime Date { get => date; set => date = value; }
-        public decimal Value { get => value; set => this.value = value; }
+        public string Name { get => _Name; set => _Name = value; }
+        public DateTime Date { get => _Date; set => _Date = value; }
+        public decimal Value { get => _Value; set => this._Value = value; }
 
         public clsWork()
         {

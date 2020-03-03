@@ -88,7 +88,7 @@ namespace Version_1_C
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(411, 24);
             this.cbType.TabIndex = 12;
-            this.cbType.SelectedIndexChanged += new System.EventHandler(this.CbType_SelectedIndexChanged);
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // InputBox
             // 

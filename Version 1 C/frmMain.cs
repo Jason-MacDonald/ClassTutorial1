@@ -51,7 +51,7 @@ namespace Version_1_C
             }
         }
 
-        public void EditArtist(string prKey)
+        private void EditArtist(string prKey)
         {
             clsArtist lcArtist;
             lcArtist = _ArtistList[prKey];

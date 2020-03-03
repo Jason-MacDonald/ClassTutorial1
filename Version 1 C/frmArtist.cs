@@ -46,7 +46,7 @@ namespace Version_1_C
             UpdateDisplay();
         }
 
-        public void DeleteWork(int prIndex)
+        private void DeleteWork(int prIndex)
         {
             if (prIndex >= 0 && prIndex < _WorksList.Count)
             {
@@ -66,9 +66,19 @@ namespace Version_1_C
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (isValid())
-            {
-                pushData();              
-                DialogResult = DialogResult.OK;
+            { // Best place to protect and mb's. Validation should be completed in setter. 
+                try
+                {
+                    pushData();
+                    MessageBox.Show("New Artist Added!");
+                    DialogResult = DialogResult.OK;
+                }
+                catch (Exception)
+                {
+                    // Message box?
+                    MessageBox.Show("Unable to add artist.");
+                }
+                
             }
         }
 
@@ -77,12 +87,10 @@ namespace Version_1_C
             if (txtName.Enabled && txtName.Text != "")
                 if (_Artist.isDuplicate(txtName.Text))
                 {
-                    MessageBox.Show("Artist with that name already exists!");
                     return false;
                 }
                 else
                 {
-                    MessageBox.Show("New Artist Added!");
                     return true;
                 }                   
             else
@@ -99,7 +107,7 @@ namespace Version_1_C
             }
         }
 
-        public void EditWork(int prIndex)
+        private void EditWork(int prIndex)
         {
             if (prIndex >= 0 && prIndex < _WorksList.Count)
             {

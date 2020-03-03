@@ -42,7 +42,7 @@ namespace Version_1_C
             return _Answer;
         }
 
-        private void CbType_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
         {
             _SelectedIndex = cbType.SelectedIndex;
         }

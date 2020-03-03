@@ -10,7 +10,7 @@ namespace Version_1_C
         private string _Type;
 
         [NonSerialized()]
-        private static frmPainting _PaintDialog;
+        private static frmPainting _PaintDialog; // User interface domain!
 
         public float Width { get => _Width; set => _Width = value; }
         public float Height { get => _Height; set => _Height = value; }

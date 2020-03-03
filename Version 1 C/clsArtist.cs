@@ -14,13 +14,13 @@ namespace Version_1_C
         private clsWorksList _WorksList;
         private clsArtistList _ArtistList;
         
-        private readonly static frmArtist _ArtistDialog = new frmArtist();
+        private readonly static frmArtist _ArtistDialog = new frmArtist(); // User interface domain!
 
         public string Name { get => _Name; set => _Name = value; }
         public string Speciality { get => _Speciality; set => _Speciality = value; }
         public string Phone { get => _Phone; set => _Phone = value; }
-        public decimal TotalValue { get => _TotalValue; /*set => _TotalValue = value;*/ } 
-        public clsWorksList WorksList { get => _WorksList; /*set => _WorksList = value;*/ } 
+        public decimal TotalValue { get => _TotalValue; } 
+        public clsWorksList WorksList { get => _WorksList; } 
         public clsArtistList ArtistList { get => _ArtistList; } 
 
         public clsArtist(clsArtistList prArtistList)
@@ -32,7 +32,7 @@ namespace Version_1_C
         
         public void EditDetails()
         {
-            _ArtistDialog.SetDetails(this);
+            _ArtistDialog.SetDetails(this); // User interface domain!
             _TotalValue = WorksList.GetTotalValue();
         }
 
