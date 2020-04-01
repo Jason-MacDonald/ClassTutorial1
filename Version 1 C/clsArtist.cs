@@ -16,7 +16,18 @@ namespace Version_1_C
         
         private readonly static frmArtist _ArtistDialog = new frmArtist(); // User interface domain!
 
-        public string Name { get => _Name; set => _Name = value; }
+        public string Name
+        {
+            get => _Name;
+            set
+            {
+                if(value != null
+                    && value != "")
+                {
+                    _Name = value;
+                }
+            } 
+        }
         public string Speciality { get => _Speciality; set => _Speciality = value; }
         public string Phone { get => _Phone; set => _Phone = value; }
         public decimal TotalValue { get => _TotalValue; } 

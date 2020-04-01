@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Version_1_C
 {
@@ -73,17 +74,18 @@ namespace Version_1_C
                     MessageBox.Show("New Artist Added!");
                     DialogResult = DialogResult.OK;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     // Message box?
                     MessageBox.Show("Unable to add artist.");
+                    Debug.WriteLine(ex.GetBaseException().Message);
                 }
                 
             }
         }
 
         public virtual bool isValid()
-        {
+        {   // Logic isn't accurate here.
             if (txtName.Enabled && txtName.Text != "")
                 if (_Artist.isDuplicate(txtName.Text))
                 {
